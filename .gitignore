@@ -1,0 +1,7 @@
+.venv
+.env
+.ruff*
+ig_session.json
+forum-fastapi.db
+uv.lock
+__pycache__
