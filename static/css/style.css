@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.3;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    margin-block: 50px;
+}
+
+h1 {
+    color: #4676bc;
+    text-align: center;
+    font-size: 5.5rem;
+    margin-inline: 200px;
+    line-height: 0.9
+}
+
+h2 {
+    color: #f17d00;
+    font-size: 2rem
+}
+
+.climber-bg {
+    color: white;
+    padding: 25px;
+    background-image: url("../images/simple-steps.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wrapper {
+    max-inline-size: 1000px;
+    margin-inline: auto;
+}
+
+footer {
+    background-color: #0c264c;
+    color: aliceblue;
+    text-align: center;
+    padding: 20px;
+    border: solid 5px #4676bc
+    
+}
