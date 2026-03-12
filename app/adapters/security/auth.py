@@ -1,12 +1,9 @@
 from datetime import UTC, datetime, timedelta
 
 import jwt
-from fastapi.security import OAuth2PasswordBearer
 from pwdlib import PasswordHash
 
 from app.core.config import settings
-
-OAUTH2_SCHEME = OAuth2PasswordBearer(tokenUrl="/api/v1/users/token")
 
 PASSWORD_HASH = PasswordHash.recommended()
 

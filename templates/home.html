@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
-    <h1>FastAPI <span class="text-aqua">Blog</span></h1>
+    <h1>FastAPI <span class="text-aqua">Forum</span></h1>
     <section>
         <h2>About</h2>
         <p>Unlike many outdoor sports, getting started with bouldering is surprisingly simple. All you need are some climbing shoes, chalk, and a positive attitude—most gyms even rent the equipment for your first sessions. No prior experience or complex gear required!</p>
@@ -23,8 +23,8 @@
     </section>
     <section class="posts">
         {% for post in posts %}
-            <h3><a href="{{ url_for('post_page', post_id=post.id) }}">{{ post.title }}</a></h3>
-            <p>~by {{ post.author }}</p>
+            <h3>{{ post.title }}</h3>
+            <p>~by {{ post.author.username }}</p>
             <p>{{ post.content }}</p>
         {% endfor %}
     </section>

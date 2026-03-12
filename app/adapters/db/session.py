@@ -1,23 +1,24 @@
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
 from sqlalchemy.orm import DeclarativeBase
 
-URL = "sqlite+aiosqlite:///./forum-fastapi.db"
+from app.core.config import settings
 
-engine = create_async_engine(
-    url=URL,
-    connect_args = {"check_same_thread": False}
-)
-
-AsyncSessionLocal = async_sessionmaker(
-    bind=engine,
-    class_=AsyncSession,
-    expire_on_commit=False
-)
+DATABASE_URL = settings.db_url
 
 class Base(DeclarativeBase):
     pass
 
-async def get_db():
-    with AsyncSessionLocal() as session:
-        yield session
+engine = create_async_engine(
+    url=DATABASE_URL,
+    connect_args={"check_same_thread": False}
+)
 
+AsyncSessionLocal = async_sessionmaker(
+    bind=engine,
+    class_ = AsyncSession,
+    expire_on_commit=False
+)
+
+async def get_db():
+    async with AsyncSessionLocal() as session:
+        yield session
