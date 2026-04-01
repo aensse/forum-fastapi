@@ -1,7 +1,6 @@
-## Scalable FastAPI Forum
-> A project with an architecture of simple, online social forum. 
+## Reservation system
+> The project is currently being integrated into the reservation system. However, the technology and API structure will remain the same.
 > The main goal is to understand real-world backend -> frontend communication and full-stack flow.
-
 
 ## API
 Currently focused on a clean, fully RESTful API.
@@ -28,7 +27,7 @@ Application is asynchronous and built on top of [FastAPI](https://github.com/fas
 A key components looks like so:
 - I/O validation with [Pydantic](https://github.com/pydantic/pydantic) models,
 - relational database with [SQLAlchemy](https://docs.sqlalchemy.org/en/20/) (via aiosqlite async driver),
-- password hashing with Argon2 + JWT-based authentication (OAuth2).
+- password hashing with Argon2 + JWT-based authentication (OAuth2),
 - server-side HTML rendering with Jinja2 templates (basic frontend),
 - super-simple HTML with CSS.
 
